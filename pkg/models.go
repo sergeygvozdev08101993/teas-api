@@ -13,8 +13,8 @@ func getTeaByName(teaName string) (Tea, error) {
 
 	var (
 		tmpData bson.M
-		data Tea
-		err error
+		data    Tea
+		err     error
 	)
 
 	teasDB := db.ClientDB.Database("teas-api")
@@ -29,7 +29,7 @@ func getTeaByName(teaName string) (Tea, error) {
 	}
 
 	data = Tea{
-		Name: tmpData["name"].(string),
+		Name:     tmpData["name"].(string),
 		Category: tmpData["category"].(string),
 	}
 
@@ -89,8 +89,8 @@ func getAllTeas() ([]Tea, error) {
 
 	var (
 		tmpTeas []bson.D
-		teas []Tea
-		err error
+		teas    []Tea
+		err     error
 	)
 
 	teasDB := db.ClientDB.Database("teas-api")
