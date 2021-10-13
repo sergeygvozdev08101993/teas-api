@@ -30,7 +30,7 @@ func CreateTeaHandler(w http.ResponseWriter, r *http.Request) {
 
 	_, err := getTeaByName(body.Data.Name)
 	if err == mongo.ErrNoDocuments {
-		if err :=  createTea(body.Data); err != nil {
+		if err := createTea(body.Data); err != nil {
 			log.Printf("failed to create a tea: %v\n", err)
 			return
 		}

@@ -7,7 +7,7 @@ import (
 	"go.mongodb.org/mongo-driver/mongo/readpref"
 )
 
-const dbURI = "mongodb+srv://gvozdev:1993gvozdev1993@gvozdev-cluster0.0cxjj.mongodb.net/test?authSource=admin&replicaSet=atlas-2koq8f-shard-0&readPreference=primary&appname=MongoDB%20Compass&ssl=true"
+const dbURI = "mongodb+srv://<user>:<password>@<cluster-name>.0cxjj.mongodb.net/test?<params>"
 
 // ClientDB содержит пул подключений к БД.
 var ClientDB *mongo.Client
